@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Le Rousseau — École Primaire</title>
-<meta name="description" content="Site vitrine de l'école primaire Le Rousseau, de la Maternelle au CM2.">
+<meta name="description" content="École Le Rousseau : 98 % de réussite au CEPE, une équipe enseignante expérimentée et des effectifs maîtrisés, de la maternelle au CM2.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -71,6 +71,7 @@
   }
   .navrow{display:flex;align-items:center;justify-content:space-between;padding-block:14px}
   .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .brand-logo{width:48px;height:48px;object-fit:contain;flex:none;border-radius:50%}
   .mark{
     width:38px;height:38px;border-radius:30% 70% 70% 30%/30% 30% 70% 70%;
     background:conic-gradient(from 210deg, var(--blue), var(--yellow), var(--blue));
@@ -125,9 +126,10 @@
 
   /* ---------- Stats strip ---------- */
   .stats{background:var(--blue-deep);padding-block:30px}
-  .statsgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
-  .statsgrid b{display:block;font-family:'Fredoka';font-size:clamp(1.5rem,3vw,2.1rem);color:var(--yellow);font-variant-numeric:tabular-nums}
-  .statsgrid span{font-size:0.82rem;color:#CFE3F5;font-weight:600}
+  .statsgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+  .statsgrid b{display:block;font-family:'Fredoka';font-size:clamp(1.35rem,2.5vw,2rem);color:var(--yellow);font-variant-numeric:tabular-nums}
+  .statsgrid .stat-label{font-size:clamp(1rem,1.8vw,1.35rem)}
+  .statsgrid span{font-size:0.88rem;color:#CFE3F5;font-weight:600}
 
   /* ---------- Section shells ---------- */
   section{padding-block:76px}
@@ -142,11 +144,6 @@
   .aboutpic .frame img{width:100%;height:100%;object-fit:cover}
   .aboutcopy p{color:var(--ink-soft);margin-bottom:16px;font-size:1.02rem}
   .aboutcopy p:last-of-type{margin-bottom:26px}
-  .signrow{display:flex;gap:16px;align-items:center;padding-top:18px;border-top:1px solid var(--border)}
-  .signrow .markmini{width:44px;height:44px;border-radius:30% 70% 70% 30%/30% 30% 70% 70%;background:conic-gradient(from 210deg,var(--blue),var(--yellow),var(--blue));flex:none}
-  .signrow b{display:block;font-family:'Fredoka';font-size:1rem}
-  .signrow span{font-size:0.85rem;color:var(--ink-soft)}
-
   /* ---------- Cycles / programme ---------- */
   .programme{background:var(--bg)}
   .cyclewrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
@@ -203,11 +200,10 @@
 
   /* ---------- Gallery ---------- */
   .gallery{background:var(--bg)}
-  .gallgrid{display:grid;grid-template-columns:1.3fr 1fr;gap:18px}
+  .gallgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
   .gallgrid figure{margin:0;position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--border)}
   .gallgrid img{width:100%;height:100%;object-fit:cover;display:block}
-  .gallgrid .big{aspect-ratio:4/3}
-  .gallgrid .small{aspect-ratio:4/3}
+  .gallgrid figure{aspect-ratio:4/3}
   .gallgrid figcaption{
     position:absolute;left:0;right:0;bottom:0;padding:16px 18px;
     background:linear-gradient(0deg, rgba(10,20,35,0.78), transparent);
@@ -270,13 +266,16 @@
     .statsgrid{grid-template-columns:repeat(2,1fr);row-gap:22px}
     .cyclewrap{grid-template-columns:1fr}
     .valgrid{grid-template-columns:repeat(2,1fr)}
-    .gallgrid{grid-template-columns:1fr}
+    .gallgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
     .stepsgrid{grid-template-columns:1fr 1fr}
     .contactcard{grid-template-columns:1fr}
   }
   @media (max-width:520px){
     .valgrid{grid-template-columns:1fr}
+    .gallgrid{grid-template-columns:1fr}
     .stepsgrid{grid-template-columns:1fr}
+    .statsgrid{gap:16px}
+    .statsgrid span{font-size:0.78rem}
   }
 </style>
 </head>
@@ -285,7 +284,7 @@
 <header>
   <div class="wrap navrow">
     <a class="brand" href="#top">
-      <span class="mark"><span>LR</span></span>
+      <img class="brand-logo" src="assets/logo-groupe-scolaire.png" alt="Logo du Groupe Scolaire Le Rousseau">
       <span class="brandtext"><b>Le Rousseau</b><em>École primaire</em></span>
     </a>
     <nav class="links">
@@ -315,9 +314,9 @@
   <section class="hero">
     <div class="wrap herogrid">
       <div>
-        <span class="eyebrow">École primaire · Maternelle à CM2</span>
+        <span class="eyebrow">École primaire · De la maternelle au CM2</span>
         <h1>Chaque enfant apprend ici à lire le monde <span class="hi">avant de le réciter.</span></h1>
-        <p class="lead">À Le Rousseau, un petit effectif et un encadrement attentif permettent à chaque élève d'avancer à son rythme, de la maternelle au CM2, dans des salles pensées pour donner envie d'apprendre.</p>
+        <p class="lead">Avec plus de 10 ans d’expérience, notre équipe enseignante accompagne chaque enfant dans des classes aux effectifs maîtrisés, pour favoriser la proximité avec les élèves et un enseignement de qualité.</p>
         <div class="herobtns">
           <a class="cta-btn" href="#inscription">Inscrire mon enfant</a>
           <a class="cta-ghost" href="#galerie">Visiter l'école
@@ -326,40 +325,35 @@
         </div>
         <div class="statline">
           <span class="dots"></span>
-          <span style="font-size:0.85rem;color:var(--ink-soft);font-weight:600">Rentrée scolaire ouverte — classes de Maternelle à CM2</span>
+          <span style="font-size:0.85rem;color:var(--ink-soft);font-weight:600">Rentrée scolaire ouverte — de la maternelle au CM2</span>
         </div>
       </div>
       <div class="heropic">
         <div class="blob b1"></div>
         <div class="blob b2"></div>
-        <div class="frame"><img src="assets/salle-de-classe.jpg" alt="Élèves de l'école Le Rousseau en classe, attentifs devant leurs cahiers" /></div>
+        <div class="frame"><img src="assets/eleves-en-classe.png" alt="Élèves du Groupe Scolaire Le Rousseau en classe" /></div>
       </div>
     </div>
   </section>
 
   <div class="stats">
     <div class="wrap statsgrid">
-      <div><b>7</b><span>niveaux, de la Maternelle au CM2</span></div>
-      <div><b>18</b><span>élèves en moyenne par classe</span></div>
-      <div><b>15+</b><span>enseignants qualifiés</span></div>
-      <div><b>98%</b><span>de réussite au Certificat d'Études</span></div>
+      <div><b>98 %</b><span>de réussite au CEPE</span></div>
+      <div><b>10 ans+</b><span>d’expérience de notre équipe enseignante</span></div>
+      <div><b class="stat-label">Effectifs maîtrisés</b><span>pour la proximité et un enseignement de qualité</span></div>
     </div>
   </div>
 
   <section class="about" id="apropos">
     <div class="wrap aboutgrid">
       <div class="aboutpic">
-        <div class="frame"><img src="assets/cour-cp2.jpg" alt="Élèves de Le Rousseau alignés devant leur salle de classe CP2" /></div>
+        <div class="frame"><img src="assets/eleves-dans-la-cour.png" alt="Les élèves du Groupe Scolaire Le Rousseau dans la cour" /></div>
       </div>
       <div class="aboutcopy reveal">
         <span class="eyebrow">Notre école</span>
         <h2 style="font-family:'Fredoka';font-size:clamp(1.6rem,2.8vw,2.1rem);font-weight:700;margin:12px 0 18px">Une école à taille humaine, pensée pour les enfants</h2>
-        <p>Le Rousseau accueille les élèves de la Petite Section au CM2 dans des salles de classe claires et colorées, où chaque niveau — de la Maternelle au CP2, jusqu'au CM2 — a son espace et son identité.</p>
+        <p>Le Rousseau accueille les élèves de la maternelle au CM2 dans des salles de classe claires et colorées, avec un espace adapté à chaque niveau.</p>
         <p>Notre équipe pédagogique construit un suivi individuel pour chaque enfant : lecture, calcul et écriture s'apprennent avec rigueur, mais aussi avec le jeu, le chant et les activités manuelles qui donnent le goût d'apprendre.</p>
-        <div class="signrow">
-          <span class="markmini"></span>
-          <div><b>La direction de l'école</b><span>Le Rousseau — École primaire</span></div>
-        </div>
       </div>
     </div>
   </section>
@@ -447,12 +441,12 @@
         <div class="valcard reveal">
           <div class="valicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
           <h3>Excellence académique</h3>
-          <p>Un programme exigeant, aligné sur les attentes nationales, porté par des enseignants formés et suivis.</p>
+          <p>Un programme exigeant, porté par une équipe enseignante qui cumule plus de 10 ans d'expérience.</p>
         </div>
         <div class="valcard reveal">
           <div class="valicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
           <h3>Encadrement bienveillant</h3>
-          <p>Des classes à effectif réduit pour que chaque élève soit vu, écouté et accompagné dans ses progrès.</p>
+          <p>Des effectifs maîtrisés pour rester proches des élèves et leur offrir un enseignement de qualité.</p>
         </div>
         <div class="valcard reveal">
           <div class="valicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.4 5.1 5.6.6-4.2 3.8 1.2 5.5-4.9-2.9-4.9 2.9 1.2-5.5-4.2-3.8 5.6-.6z"/></svg></div>
@@ -473,16 +467,32 @@
       <div class="sechead">
         <span class="eyebrow">Vie scolaire</span>
         <h2>Un aperçu de nos journées de classe</h2>
-        <p>De la salle de classe à la cour de récréation, un quotidien calme, coloré et plein de vie.</p>
+        <p>Découvrez les classes, les espaces de l’école et quelques moments de la vie des élèves.</p>
       </div>
       <div class="gallgrid">
-        <figure class="big">
-          <img src="assets/salle-de-classe.jpg" alt="Élèves assis à leur bureau dans une salle de classe bleue, cahiers ouverts" />
-          <figcaption>En classe — travail du matin</figcaption>
+        <figure>
+          <img src="assets/ecole-facade-entree.png" alt="Façade et entrée de l'école Le Rousseau" loading="lazy" />
+          <figcaption>Bienvenue à l’école Le Rousseau</figcaption>
         </figure>
-        <figure class="small">
-          <img src="assets/cour-cp2.jpg" alt="Élèves alignés devant la porte de leur salle CP2, avant d'entrer en classe" />
-          <figcaption>Devant la classe de CP2</figcaption>
+        <figure>
+          <img src="assets/classe-maternelle.png" alt="Salle de classe de maternelle aménagée pour les enfants" loading="lazy" />
+          <figcaption>Un espace accueillant pour apprendre</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/ecole-facade-cour.png" alt="Vue sur les salles de classe et la cour de l'école" loading="lazy" />
+          <figcaption>Les espaces de l’école</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/eleves-dans-la-cour.png" alt="Élèves réunis dans la cour de l'école" loading="lazy" />
+          <figcaption>La vie à l’école</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/eleves-maternelle.png" alt="Jeunes élèves réunis dans leur salle de classe" loading="lazy" />
+          <figcaption>Les élèves de maternelle</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/eleves-en-classe.png" alt="Élèves attentifs pendant un cours en classe" loading="lazy" />
+          <figcaption>Apprendre ensemble en classe</figcaption>
         </figure>
       </div>
     </div>
@@ -543,7 +553,7 @@
   <div class="wrap">
     <div class="footgrid">
       <div class="footbrand">
-        <span class="mark" style="width:32px;height:32px"><span style="font-size:0.78rem">LR</span></span>
+        <img class="brand-logo" src="assets/logo-groupe-scolaire.png" alt="" style="width:40px;height:40px">
         <b>Le Rousseau</b>
       </div>
       <div class="footlinks">
