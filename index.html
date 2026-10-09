@@ -162,31 +162,6 @@
   @media (prefers-color-scheme:dark){ .cyclecard:nth-of-type(2) .pill{color:#3A2607} }
   :root[data-theme="dark"] .cyclecard:nth-of-type(2) .pill{color:#3A2607}
 
-  .cantine-banner{
-    margin-top:24px;background:var(--surface-2);border-radius:20px;padding:24px 28px;
-    display:flex;gap:18px;align-items:flex-start;
-  }
-  .cantine-banner .cantine-ic{
-    width:46px;height:46px;border-radius:12px;background:var(--surface);color:var(--blue);
-    display:flex;align-items:center;justify-content:center;flex:none;
-    box-shadow:0 6px 14px -8px rgba(15,61,102,0.25);
-  }
-  .cantine-banner h3{font-size:1.05rem;margin:0 0 6px}
-  .cantine-banner p{color:var(--ink-soft);font-size:0.95rem;margin:0}
-  @media (max-width:520px){ .cantine-banner{flex-direction:column} }
-
-  /* ---------- Scolarité ---------- */
-  .scolarite{background:var(--surface)}
-  .feetable-wrap{background:var(--bg);border:1px solid var(--border);border-radius:22px;overflow:hidden}
-  .feetable{width:100%;border-collapse:collapse}
-  .feetable th,.feetable td{padding:14px 24px;text-align:left;font-size:0.96rem}
-  .feetable thead th{background:var(--blue-deep);color:#fff;font-family:'Fredoka';font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em}
-  .feetable thead th:last-child{text-align:right}
-  .feetable tbody tr:nth-child(even){background:var(--surface-2)}
-  .feetable tbody td:last-child{font-weight:700;color:var(--blue-deep);text-align:right}
-  :root[data-theme="dark"] .feetable tbody td:last-child{color:var(--blue)}
-  @media (max-width:520px){ .feetable th,.feetable td{padding:10px 14px;font-size:0.86rem} }
-
   /* ---------- Values ---------- */
   .values{background:var(--surface)}
   .valgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -290,7 +265,6 @@
     <nav class="links">
       <a href="#apropos">À propos</a>
       <a href="#programme">Programme</a>
-      <a href="#scolarite">Scolarité</a>
       <a href="#valeurs">Valeurs</a>
       <a href="#galerie">Vie scolaire</a>
       <a href="#inscription">Contact</a>
@@ -303,7 +277,6 @@
   <div class="wrap mobilepanel" id="mobilePanel">
     <a href="#apropos">À propos</a>
     <a href="#programme">Programme</a>
-    <a href="#scolarite">Scolarité</a>
     <a href="#valeurs">Valeurs</a>
     <a href="#galerie">Vie scolaire</a>
     <a href="#inscription">Contact / Inscription</a>
@@ -315,7 +288,7 @@
     <div class="wrap herogrid">
       <div>
         <span class="eyebrow">École primaire · De la maternelle au CM2</span>
-        <h1>Chaque enfant apprend ici à lire le monde <span class="hi">avant de le réciter.</span></h1>
+        <h1>Bien apprendre aujourd’hui pour mieux construire demain.</h1>
         <p class="lead">Avec plus de 10 ans d’expérience, notre équipe enseignante accompagne chaque enfant dans des classes aux effectifs maîtrisés, pour favoriser la proximité avec les élèves et un enseignement de qualité.</p>
         <div class="herobtns">
           <a class="cta-btn" href="#inscription">Inscrire mon enfant</a>
@@ -390,44 +363,6 @@
           </div>
         </div>
       </div>
-      <div class="cantine-banner reveal">
-        <div class="cantine-ic">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 2v8a2 2 0 0 0 2 2v10M7 2v6M11 2v6M15 2c-1.5 1.5-2 3-2 5s.5 4 2 6v9"/></svg>
-        </div>
-        <div>
-          <h3>Cantine scolaire</h3>
-          <p>L'école dispose d'une cantine sur place : les enfants peuvent déjeuner à l'école chaque jour de classe, dans un cadre surveillé par l'équipe pédagogique. Renseignez-vous auprès du secrétariat pour les modalités.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="scolarite" id="scolarite">
-    <div class="wrap">
-      <div class="sechead">
-        <span class="eyebrow">Scolarité</span>
-        <h2>Frais de scolarité par niveau</h2>
-        <p>Un tarif unique et transparent pour toutes les classes, de la Petite Section au CM2.</p>
-      </div>
-      <div class="feetable-wrap reveal">
-        <table class="feetable">
-          <thead>
-            <tr><th>Niveau</th><th>Scolarité annuelle</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Petite Section</td><td>90 000 FCFA</td></tr>
-            <tr><td>Moyenne Section</td><td>90 000 FCFA</td></tr>
-            <tr><td>Grande Section</td><td>90 000 FCFA</td></tr>
-            <tr><td>CP1</td><td>90 000 FCFA</td></tr>
-            <tr><td>CP2</td><td>90 000 FCFA</td></tr>
-            <tr><td>CE1</td><td>90 000 FCFA</td></tr>
-            <tr><td>CE2</td><td>90 000 FCFA</td></tr>
-            <tr><td>CM1</td><td>90 000 FCFA</td></tr>
-            <tr><td>CM2</td><td>90 000 FCFA</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note" style="margin-top:14px">Tarifs indicatifs, à confirmer auprès du secrétariat lors de l'inscription. Frais de cantine non compris.</p>
     </div>
   </section>
 
@@ -559,7 +494,6 @@
       <div class="footlinks">
         <a href="#apropos">À propos</a>
         <a href="#programme">Programme</a>
-        <a href="#scolarite">Scolarité</a>
         <a href="#valeurs">Valeurs</a>
         <a href="#galerie">Vie scolaire</a>
         <a href="#inscription">Inscription</a>
